@@ -1,2 +1,2 @@
-# weheartit
-A fast, reliable API wrapper for WeHeartIt. 
+# **weheartit**
+_A fast, reliable API wrapper for WeHeartIt._ 
