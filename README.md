@@ -26,7 +26,7 @@ you can easily install these packages using [pip](https://pypi.org)
 I'm adding more functionalities and utilities later on, 
 but this is all we got for now. 
 
-# posts() 
+# posts
 
 this shows the most basic way you can utilize weheartit
 ```python
@@ -44,7 +44,7 @@ for post in post:
 * returns - Image Links[[List](https://docs.python.org/3/library/stdtypes.html#list)], 
 A`NoContentFound` error if it couldn't find any results. 
 
-# collections() 
+# collections
 
 ```python
 collections = whi.collections("cute") 
@@ -53,15 +53,17 @@ for collection in collections:
     print(collection) 
 ```
 * parameters - `query` aka the search term
-* returns - A python list of collection links
+* returns - A python [List](https://docs.python.org/3/library/stdtypes.html#list) 
+of [collection](https://weheartit.com/aargauu/collections/180895449-?usr=64895904) links
+A`NoContentFound` error if it couldn't find any results. 
 
-# users() 
+# users
 
 ```python
 users = whi.users("someusername") 
-# returns a list of all the accounts that possibly match
-with the username given. 
+# returns a list of all the accounts that possibly match with the username given. 
 ```
 * parameters - `username` the username of the person you're searching for. 
-* returns - A List of all possible accounts matching the username. 
+* returns - A [List](https://docs.python.org/3/library/stdtypes.html#list) 
+of all possible accounts matching the username. 
  
