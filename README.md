@@ -24,7 +24,7 @@ you can easily install these packages using [pip](https://pypi.org)
 pip install weheartit
 
 ```
-let [me](https://instagram.com/notreallyaswin) know if this doesn't work.
+let [me](https://instagram.com/notreallyaswin) know if this doesn't work
 
 # usage
 **with weheartit, you can search and retrive:**
