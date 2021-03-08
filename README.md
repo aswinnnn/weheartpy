@@ -41,6 +41,6 @@ for post in post:
 * parameters - `query` - which is your search query, 
 `sort` - sort has two options, `recent` and `popular`
 
-* returns - Image Links[List]
-A `NoContentFound` error if it couldn't find any results. 
+* returns - Image Links[[List](https://docs.python.org/3/library/stdtypes.html#list)], 
+A`NoContentFound` error if it couldn't find any results. 
  
