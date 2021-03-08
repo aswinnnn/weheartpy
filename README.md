@@ -43,4 +43,25 @@ for post in post:
 
 * returns - Image Links[[List](https://docs.python.org/3/library/stdtypes.html#list)], 
 A`NoContentFound` error if it couldn't find any results. 
+
+# collections() 
+
+```python
+collections = whi.collections("cute") 
+# returns a List of collection links
+for collection in collections:
+    print(collection) 
+```
+* parameters - `query` aka the search term
+* returns - A python list of collection links
+
+# users() 
+
+```python
+users = whi.users("someusername") 
+# returns a list of all the accounts that possibly match
+with the username given. 
+```
+* parameters - `username` the username of the person you're searching for. 
+* returns - A List of all possible accounts matching the username. 
  
