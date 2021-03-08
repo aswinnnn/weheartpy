@@ -10,9 +10,9 @@ and `requests` to do my job. The speed is optimal, but if you want
 as asynchronous or faster module, just let me know.
 
 # requirements
-there are only two requirements for this module:
-`beautifulsoup4`
-`requests`
+there are only two requirements for this module:\n
+`beautifulsoup4`\n
+`requests`\n
 you can easily install these packages using [pip](https://pypi.org)
 
  
