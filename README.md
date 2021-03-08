@@ -1,5 +1,5 @@
 # **weheartit**
-**A fast, reliable API wrapper for weheartit.com**
+## **A fast, reliable API wrapper for weheartit.com**
 
 # Description
 weheartit (named after the site itself, [weheartit](https://weheartit.com))
