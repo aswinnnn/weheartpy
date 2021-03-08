@@ -9,6 +9,7 @@ is a fast, **usable** API wrapper for weheartit.com
 and `requests` to do my job. The speed is optimal, but if you want
 as asynchronous or faster module, just let me know.
 
+
 # requirements
 there are only two requirements for this module:
 * `beautifulsoup4`
@@ -16,7 +17,8 @@ there are only two requirements for this module:
 
 you can easily install these packages using [pip](https://pypi.org)
 
-# functions 
+
+# usage
 **with weheartit, you can search and retrive:**
 * posts
 * collections
@@ -25,6 +27,7 @@ you can easily install these packages using [pip](https://pypi.org)
 
 I'm adding more functionalities and utilities later on, 
 but this is all we got for now. 
+
 
 # posts
 
@@ -43,6 +46,7 @@ for post in post:
 
 * returns - Image Links[[List](https://docs.python.org/3/library/stdtypes.html#list)], A`NoContentFound` error if it couldn't find any results. 
 
+
 # collections
 
 ```python
@@ -55,6 +59,7 @@ for collection in collections:
 * returns - A python [List](https://docs.python.org/3/library/stdtypes.html#list) 
 of [collection](https://weheartit.com/aargauu/collections/180895449-?usr=64895904) links, A`NoContentFound` error if it couldn't find any results. 
 
+
 # users
 
 ```python
@@ -64,6 +69,7 @@ users = whi.users("someusername")
 * parameters - `username` the username of the person you're searching for. 
 * returns - A [List](https://docs.python.org/3/library/stdtypes.html#list) 
 of all possible accounts matching the username.And of course a `NoContentFound` error if it couldn't find any results. 
+
 
 # popular
 
