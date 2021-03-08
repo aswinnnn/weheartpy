@@ -1,4 +1,4 @@
-## **weheartit**
+# **weheartit**
 **A fast, reliable API wrapper for weheartit.com**
 
 # Description
@@ -41,8 +41,7 @@ for post in post:
 * parameters - `query` - which is your search query, 
 `sort` - sort has two options, `recent` and `popular`
 
-* returns - Image Links[[List](https://docs.python.org/3/library/stdtypes.html#list)], 
-A`NoContentFound` error if it couldn't find any results. 
+* returns - Image Links[[List](https://docs.python.org/3/library/stdtypes.html#list)], A`NoContentFound` error if it couldn't find any results. 
 
 # collections
 
@@ -54,8 +53,7 @@ for collection in collections:
 ```
 * parameters - `query` aka the search term
 * returns - A python [List](https://docs.python.org/3/library/stdtypes.html#list) 
-of [collection](https://weheartit.com/aargauu/collections/180895449-?usr=64895904) links
-A`NoContentFound` error if it couldn't find any results. 
+of [collection](https://weheartit.com/aargauu/collections/180895449-?usr=64895904) links, A`NoContentFound` error if it couldn't find any results. 
 
 # users
 
@@ -65,5 +63,16 @@ users = whi.users("someusername")
 ```
 * parameters - `username` the username of the person you're searching for. 
 * returns - A [List](https://docs.python.org/3/library/stdtypes.html#list) 
-of all possible accounts matching the username. 
+of all possible accounts matching the username.And of course a `NoContentFound` error if it couldn't find any results. 
+
+# popular
+
+```python
+popularposts = whi.popular() 
+# returns a list of all the popular images. 
+```
+* parameters - none, because it retrives the popular images
+right from the homepage. 
+
+* returns - A [List](https://docs.python.org/3/library/stdtypes.html#list) of the popular images. 
  
