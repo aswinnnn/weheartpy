@@ -41,6 +41,6 @@ for post in post:
 * parameters - `query` - which is your search query, 
 `sort` - sort has two options, `recent` and `popular`
 
-* returns - List (image links)
-a `NoContentFound` error if it couldn't find any results. 
+* returns - Image Links[List]
+A `NoContentFound` error if it couldn't find any results. 
  
