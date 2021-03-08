@@ -1,6 +1,7 @@
 # **weheartit**
 
-**A fast, reliable API wrapper for weheartit.com**
+**A fast, reliable API wrapper for WeHeartIt.**
+
 ![weheartit](https://cdn.discordapp.com/attachments/672436233229828108/818444209291657226/images_1.png) 
 
 # Description
