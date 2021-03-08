@@ -23,10 +23,11 @@ you can easily install these packages using [pip](https://pypi.org)
 # installation
 
 ```
-pip install weheartit
+pip install git+https://github.com/aswinnnn/weheartit.git
 
 ```
-let me know if this doesn't work
+since twine is being an ass to me, this is the way supported
+for now. Let me know if this doesn't work
 
 # usage
 **with weheartit, you can search and retrive:**
