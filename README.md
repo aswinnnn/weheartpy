@@ -24,7 +24,7 @@ you can easily install these packages using [pip](https://pypi.org)
 pip install weheartit
 
 ```
-let [me](https://instagram.com/notreallyaswin) know if this doesn't work
+let me know if this doesn't work
 
 # usage
 **with weheartit, you can search and retrive:**
@@ -89,4 +89,11 @@ popularposts = whi.popular()
 right from the homepage. 
 
 * returns - A [List](https://docs.python.org/3/library/stdtypes.html#list) of the popular images. 
+
+# About
+
+- more utilities might come later, not sure
+- feel free to fork, pull, and open issues! 
+- I'm sorry if the code is a little shabby, this is my first time writing a package
+
  
