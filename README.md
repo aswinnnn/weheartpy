@@ -10,7 +10,7 @@ is a fast, **usable** API wrapper for weheartit.com
 
 [We Heart It](https://weheartit.com) does not have an API. So i make use of `BeautifulSoup`
 and `requests` to do my job. The speed is optimal, but if you want
-as asynchronous or faster module, just let me know.
+an asynchronous or faster module, just let me know.
 
 
 # requirements
