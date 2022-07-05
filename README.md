@@ -2,6 +2,8 @@
 
 **A fast, reliable API wrapper for WeHeartIt.**
 
+## This repository will be going through breaking changes in the following weeks. The readme will be updated constantly and a documentation will be introduuced.
+
 ![weheartit](https://cdn.discordapp.com/attachments/672436233229828108/818444209291657226/images_1.png) 
 
 # Description
