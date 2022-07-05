@@ -1,104 +1,108 @@
-# **weheartit**
+# 💗 **weheartpy**
 
-**A fast, reliable API wrapper for WeHeartIt.**
-
-## This repository will be going through breaking changes in the following weeks. The readme will be updated constantly and a documentation will be introduced.
+**A fast, reliable API client for WeHeartIt.**
 
 ![weheartit](https://cdn.discordapp.com/attachments/672436233229828108/818444209291657226/images_1.png) 
 
-# Description
-weheartit (named after the site itself, [weheartit](https://weheartit.com))
-is a fast, **usable** API wrapper for weheartit.com
+# 🌵 Description
+weheartpy is an unofficial API client for [weheartit](https://weheartit.com)
 
-[We Heart It](https://weheartit.com) does not have an API. So i make use of `BeautifulSoup`
-and `requests` to do my job. The speed is optimal, but if you want
-an asynchronous or faster module, just let me know.
+[WeHeartIt](https://weheartit.com) does not have an API. So I have to make use of `BeautifulSoup`
+and `requests` to do my job. The speed is optimal, it has a limitation on number of results you can retreive through one search but its functional.
 
 
-# requirements
-there are only two requirements for this module:
-* `beautifulsoup4`
-* `requests`
+# 🖇️ Requirements
+* requires `Python 10.4` or above.
+* read the requirements [here](requirements.txt)
 
-you can easily install these packages using [pip](https://pypi.org)
+you can easily install the packages using [pip](https://pypi.org)
 
-# installation
-
+# 💽 Installation
+```
+pip install weheartpy
+```
+or
 ```
 pip install git+https://github.com/aswinnnn/weheartit.git
 
 ```
-since twine is being an ass to me, this is the way supported
-for now. Let me know if this doesn't work
 
-# usage
-**with weheartit, you can search and retrive:**
-* posts
-* collections
+# ⚙️ Features
+**with weheartpy, you can search for:**
+* posts aka entries
+* collections (including images inside them)
 * users
-* popular posts
+* popular entries
 
 I'm adding more functionalities and utilities later on, 
 but this is all we got for now. 
 
+# 📜 Usage
+this is the most basic usage of the weheartpy module.
 
-# posts
-
-this shows the most basic way you can utilize weheartit
 ```python
-from weheartit import whi
-# import the module
+# import the main class
+from weheartpy import WeHeartIt
 
-posts = whi.posts("animals", sort="popular") 
-# This returns a list of images (links) 
-for post in post:
-    print(post) 
+whi = WeHeartIt() # create an instance of WeHeartIt
+
+entries = whi.popular() # returns a list of recent popular images from homepage.
+
+for entry in entries:
+	print(entry.id)
+	print(entry.username)
+	print(entry.image)
+	print(entry.url)
 ```
-* parameters - `query` - which is your search query, 
-`sort` - sort has two options, `recent` and `popular`
+* parameters - None
 
-* returns - Image Links[[List](https://docs.python.org/3/library/stdtypes.html#list)], A`NoContentFound` error if it couldn't find any results. 
+* returns - List[[Entry](weheartpy/models.py)] a list of `Entry` objects which help you access the entries easier. 
+* errors - `ConnectionError`
+
+# 📷 Posts / Entries
+search for entries.
+```python
+entries = whi.search_entries("mean girls", sort="most_popular")
+# returns a list of entries relevant to your query.
+
+for entry in entries:
+	print(entry.username, entry.image, entry.url)
+```
+* parameters - `query` - your search query
+
+* returns - List[[Entry](weheartpy/models.py)] a list of `Entry` objects which help you access the entries easier. 
+* errors - `ConnectionError`
 
 
-# collections
+# 🖼️ Collections
 
 ```python
-collections = whi.collections("cute") 
-# returns a List of collection links
-for collection in collections:
-    print(collection) 
+# return a list of `Collection` objects resulting from the query.
+
+from weheartpy import WeHeartIt
+
+whi = WeHeartIt()
+
+cocs = whi.search_collections("anime pfp")
+for c in cocs:
+    print(c.title, c.link)
+    collection = c.get_full_collection()
+    print(collection.images, collection.description)
 ```
 * parameters - `query` aka the search term
-* returns - A python [List](https://docs.python.org/3/library/stdtypes.html#list) 
-of [collection](https://weheartit.com/aargauu/collections/180895449-?usr=64895904) links, A`NoContentFound` error if it couldn't find any results. 
+* returns - List[[Collection](weheartpy/models.py)] Check out the documentation to see what else you can do with `Collection` objects.
+* errors - `NoCollectionsFound` 
 
-
-# users
-
-```python
-users = whi.users("someusername") 
-# returns a list of all the accounts that possibly match with the username given. 
-```
-* parameters - `username` the username of the person you're searching for. 
-* returns - A [List](https://docs.python.org/3/library/stdtypes.html#list) 
-of all possible accounts matching the username.And of course a `NoContentFound` error if it couldn't find any results. 
-
-
-# popular
-
-```python
-popularposts = whi.popular() 
-# returns a list of all the popular images. 
-```
-* parameters - none, because it retrives the popular images
-right from the homepage. 
-
-* returns - A [List](https://docs.python.org/3/library/stdtypes.html#list) of the popular images. 
-
-# About
-
-- more utilities might come later, not sure
+# 📃 Documentation
+* check out the [documentation]() for more usages. 
+* If you'd like to add something or fix mistakes, feel free to open an issue or a pull request.
+  
+# ♾️ About
+- more utilities might come later, depending on need and interest.
 - feel free to fork, pull, and open issues! 
-- I'm sorry if the code is a little shabby, this is my first time writing a package
-
+- currently on `v0.2`
+  
+# ⚠️ Disclaimer
+- Since this makeshift API client relies on the websites elements to remain unchanged, expect this package to break easily someday. `useragent` will be supported soon.
+- This package, code or software is made for educational purposes and does not intend to break any ToS of weheartit.com. The creator/maintainer of this package will not be responsible for any actions done using the code. Use with your own caution and volition.
  

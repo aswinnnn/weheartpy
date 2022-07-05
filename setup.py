@@ -3,20 +3,21 @@ from setuptools import setup, find_packages
 
 HERE = pathlib.Path(__file__).parent
 
-VERSION = '0.0.1'
-PACKAGE_NAME = 'weheartit'
+VERSION = '0.2'
+PACKAGE_NAME = 'weheartpy'
 AUTHOR = 'aswinnnn'
-AUTHOR_EMAIL = 'xaswinsnairx@gmail.com'
-URL = 'https://github.com/aswinnnn/weheartit'
+AUTHOR_EMAIL = 'aswinsnair028@gmail.com'
+URL = 'https://github.com/aswinnnn/weheartpy'
 
 LICENSE = 'MIT License'
-DESCRIPTION = 'A fast, realiable API wrapper for weheartit.com, in Python.'
+DESCRIPTION = 'A comprehensive, realiable API client for weheartit.com.'
 LONG_DESCRIPTION = (HERE / "README.md").read_text()
 LONG_DESC_TYPE = "text/markdown"
 
 INSTALL_REQUIRES = [
       'requests',
-      'beautifulsoup4'
+      'beautifulsoup4',
+      'lxml'
 ]
 
 setup(name=PACKAGE_NAME,
