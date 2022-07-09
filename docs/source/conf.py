@@ -19,8 +19,8 @@ sys.path.append(os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 
 project = 'weheartpy'
-copyright = '2022, Aswin S.'
-author = 'Aswin S.'
+copyright = '2022, Aswin S'
+author = 'Aswin S'
 
 # The full version, including alpha/beta/rc tags
 release = '0.2'
@@ -39,9 +39,8 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = []
 
-master_doc = 'index'
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
