@@ -6,7 +6,7 @@
 .. autosummary::
    :toctree: 
 
-   weheartpy.WeHeartIt
+   weheartpy
    weheartpy.handler
    weheartpy.models
    
