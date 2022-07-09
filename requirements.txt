@@ -1,4 +1,4 @@
 requests
 beautifulsoup4
 lxml
-weheartpy
+git+https://github.com/aswinnnn/weheartpy.git
