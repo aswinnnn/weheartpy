@@ -12,6 +12,9 @@
 #
 import os
 import sys
+from weheartpy import WeHeartIt
+import weheartpy
+
 sys.path.append(os.path.abspath('../..'))
 sys.path.append(os.path.abspath('..'))
 
