@@ -1,4 +1,4 @@
-[![PyPI version](https://badge.fury.io/py/weheartpy.svg)](https://badge.fury.io/py/weheartpy) [![Tests](https://img.shields.io/badge/0.2.0-passed-green)] [![Downloads](https://pepy.tech/badge/weheartpy)](https://pepy.tech/project/weheartpy)
+[![PyPI version](https://badge.fury.io/py/weheartpy.svg)](https://badge.fury.io/py/weheartpy) [![Tests](https://img.shields.io/badge/0.2.0-passed-green)](https://img.shields.io/badge/0.2.0-passed-green) [![Downloads](https://pepy.tech/badge/weheartpy)](https://pepy.tech/project/weheartpy)
 
 # **weheartpy**
 
