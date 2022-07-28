@@ -1,4 +1,4 @@
-[![PyPI version](https://badge.fury.io/py/weheartpy.svg)](https://badge.fury.io/py/weheartpy) [![Tests](https://img.shields.io/badge/0.2.0-passed-green)](https://img.shields.io/badge/0.2.0-passed-green) [![Downloads](https://pepy.tech/badge/weheartpy)](https://pepy.tech/project/weheartpy) [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![PyPI version](https://badge.fury.io/py/weheartpy.svg)](https://badge.fury.io/py/weheartpy) [![Tests](https://img.shields.io/badge/0.2.0-passed-green)](https://img.shields.io/badge/0.2.0-passed-green) [![Downloads](https://pepy.tech/badge/weheartpy)](https://pepy.tech/project/weheartpy) [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/) [![Top Language](https://img.shields.io/github/languages/top/aswinnnn/weheartpy)](https://img.shields.io/github/languages/top/aswinnnn/weheartpy)
 
 # **weheartpy**
 
