@@ -1,3 +1,5 @@
+[![Downloads](https://pepy.tech/badge/weheartpy)](https://pepy.tech/project/weheartpy)
+
 # **weheartpy**
 
 **A fast, reliable API client for WeHeartIt.**
