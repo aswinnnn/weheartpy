@@ -1,4 +1,4 @@
-[![Downloads](https://pepy.tech/badge/weheartpy)](https://pepy.tech/project/weheartpy)
+[![PyPI version](https://badge.fury.io/py/weheartpy.svg)](https://badge.fury.io/py/weheartpy) [![Downloads](https://pepy.tech/badge/weheartpy)](https://pepy.tech/project/weheartpy)
 
 # **weheartpy**
 
