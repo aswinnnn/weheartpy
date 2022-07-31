@@ -3,7 +3,7 @@
 
 **A fast, reliable API client for WeHeartIt.**
 
-![weheartit](https://cdn.discordapp.com/attachments/672436233229828108/818444209291657226/images_1.png) 
+![weheartpy](https://media.discordapp.net/attachments/1002212458502557718/1003290415329443850/PicsArt_07-31-06.47.36.jpg) 
 
 # Description
 weheartpy is an unofficial API client for [weheartit](https://weheartit.com)
@@ -13,7 +13,7 @@ and `requests` to do my job. The speed is optimal, it has a limitation on number
 
 
 # Requirements
-* requires `Python 10.4` or above.
+* requires `Python 10.*` or above.
 * read the requirements [here](requirements.txt)
 
 you can easily install the packages using [pip](https://pypi.org)
