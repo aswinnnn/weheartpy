@@ -95,7 +95,7 @@ for c in cocs:
 * errors - `NoCollectionsFound` 
 
 # Documentation
-* check out the [documentation]() for more usages. 
+* check out the [documentation](https://aswinnnn.github.io/weheartpy/) for more usages. 
 * If you'd like to add something or fix mistakes, feel free to open an issue or a pull request.
   
 # About
