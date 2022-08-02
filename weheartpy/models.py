@@ -98,10 +98,14 @@ class Collection():
         return self
 
     def save(self, fp) -> None:
+        cnt = 0
+        filename = "collection" + f"{cnt}"
+        fp = fp + "\{filename}.jpeg"
         for img in self.images:
             img = requests.get(img)
             with open(Path(fp), "x") as f:
                 f.write(img.content)
+            cnt += 1
 
 class User():
     '''

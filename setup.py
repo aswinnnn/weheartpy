@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 HERE = pathlib.Path(__file__).parent
 
-VERSION = '0.2'
+VERSION = '0.2.1'
 PACKAGE_NAME = 'weheartpy'
 AUTHOR = 'aswinnnn'
 AUTHOR_EMAIL = 'aswinsnair028@gmail.com'

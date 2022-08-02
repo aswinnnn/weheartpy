@@ -50,10 +50,10 @@ whi = WeHeartIt() # create an instance of WeHeartIt
 entries = whi.popular() # returns a list of recent popular images from homepage.
 
 for entry in entries:
-	print(entry.id)
-	print(entry.username)
-	print(entry.image)
-	print(entry.url)
+	print(entry.username, entry.image, entry url) # view the entry's contents
+
+	entry.save("\images\cool_pic_from_weheartit.jpeg") # save the image from the post locally.
+
 ```
 * parameters - None
 
@@ -89,6 +89,11 @@ for c in cocs:
     print(c.title, c.link)
     collection = c.get_full_collection()
     print(collection.images, collection.description)
+
+	# save the images from a collection to a folder:
+	collection.save("\collection\")
+	# images will be saved as "collection0.jpeg", "collection1.jpeg", etc.
+	
 ```
 * parameters - `query` aka the search term
 * returns - List[[Collection](weheartpy/models.py)] Check out the documentation to see what else you can do with `Collection` objects.
