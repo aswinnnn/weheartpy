@@ -1,6 +1,7 @@
 # The objects through which the results will be returned.
 import requests
 from bs4 import BeautifulSoup as bs
+from pathlib import Path
 
 class Entry():
     '''
@@ -33,6 +34,13 @@ class Entry():
 
     def __ne__(self, __o: object) -> bool:
         return self.url != __o.url
+
+    def save(self, fp) -> None:
+        img = requests.get(self.image)
+        with open(Path(fp), "x") as f:
+            f.write(img.content)
+
+
 
 
 class Collection():
@@ -88,6 +96,12 @@ class Collection():
         self.images = entries
         self.description = desc
         return self
+
+    def save(self, fp) -> None:
+        for img in self.images:
+            img = requests.get(img)
+            with open(Path(fp), "x") as f:
+                f.write(img.content)
 
 class User():
     '''
