@@ -13,6 +13,11 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+  'beautifulsoup4',
+  'requests',
+  'lxml'
+]
 
 [project.urls]
 "Homepage" = "https://github.com/aswinnnn/weheartpy"
