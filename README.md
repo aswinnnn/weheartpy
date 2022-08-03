@@ -29,11 +29,11 @@ pip install git+https://github.com/aswinnnn/weheartpy.git
 ```
 
 # Features
-**with weheartpy, you can search for:**
-* posts aka entries
-* collections (including images inside them)
-* users
-* popular entries
+with weheartpy, you can search for:
+- posts aka entries
+- collections (including images inside them)
+- users
+- popular entries
 
 I'm adding more functionalities and utilities later on, 
 but this is all we got for now. 
