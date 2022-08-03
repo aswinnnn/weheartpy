@@ -24,7 +24,7 @@ pip install weheartpy
 ```
 or
 ```
-pip install git+https://github.com/aswinnnn/weheartit.git
+pip install git+https://github.com/aswinnnn/weheartpy.git
 
 ```
 
@@ -50,7 +50,8 @@ whi = WeHeartIt() # create an instance of WeHeartIt
 entries = whi.popular() # returns a list of recent popular images from homepage.
 
 for entry in entries:
-	print(entry.username, entry.image, entry url) # view the entry's contents
+	print(entry.image, entry.views, entry.creator.username) # view the entry's contents
+	print(entry.hearts, entry.title)
 
 	entry.save("\images\cool_pic_from_weheartit.jpeg") # save the image from the post locally.
 
@@ -103,10 +104,13 @@ for c in cocs:
 * check out the [documentation](https://aswinnnn.github.io/weheartpy/) for more usages. 
 * If you'd like to add something or fix mistakes, feel free to open an issue or a pull request.
   
-# About
-- more utilities might come later, depending on need and interest.
-- feel free to fork, pull, and open issues! 
-- currently on `v0.2`
+# Updates
+- `v0.2.3` coming soon - hopefully featuring `useragent` and other improvements.
+- `v0.2.2` - Big update, the library uses weheartit's natural API to bring `Entry` data.
+-  - this features a whole new ton of information you can use from entries such as a views, hearts, tags, titles and creation dates.
+-  - It also includes a `.creator` attribute which is a `User` object of the creator of the post.
+-  - If you notice anything slow, its the API calls to weheartit.com. The IO time can be a pain if you have slow internet, nothing I can fix on my side.
+- `v0.2.1` - Implement save feature, lets users save images locally.
   
 # Disclaimer
 - Since this makeshift API client relies on the websites elements to remain unchanged, expect this package to break easily someday. `useragent` will be supported soon.

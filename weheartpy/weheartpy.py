@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 from .handler import Error, NoCollectionsFound, NoPostsFound, ConnectionError, NoUsersFound
 from .models import Entry, Collection, User
-
+from .api import Api
 
 class WeHeartIt():
 	'''
@@ -25,6 +25,7 @@ class WeHeartIt():
 				
 		self.status = err.status_code
 		self.url = err.url
+		self.api = Api()
 		
 	def popular(self) -> list[Entry]:
 		'''
@@ -36,24 +37,19 @@ class WeHeartIt():
 		entries = whi.popular()
 		for entry in entries:
 			print(entry.id)
-			print(entry.username)
+			print(entry.creator.name)
 			print(entry.image)
 			print(entry.url)
 		```
 		'''
 		res = requests.get("https://weheartit.com")
-		res = bs(res.text)
+		res = bs(res.text, features="lxml")
 		images = res.find_all('a', {'class': 'entry js-blc js-blc-t-heart btn-heart btn btn-heart-circle js-heart-button'})
 
 		entries = []
 
 		for img in images:
-			image = f"https://data.whicdn.com/images/{img['data-entry-id']}/original.jpg"
-
-			entry = Entry(id=int(img['data-entry-id']),
-			username=img['data-hearter-username'],
-			entry=img['href'],
-			image=image)
+			entry = self.api.entry(int(img["data-entry-id"]))
 
 			entries.append(entry)
 			
@@ -76,12 +72,12 @@ class WeHeartIt():
 		'''
 		res = requests.get(f"https://weheartit.com/search/collections?query={query}&sort=most_recent")
 		
-		find = bs(res.text)
+		find = bs(res.text, features="lxml")
 		atags = find.find_all('a', {'class':'js-blc js-blc-t-collection collection-name text-overflow-parent'})
 		collections = []
 		for a in atags:
 			link = a['href']
-			pop = bs(str(a))
+			pop = bs(str(a), features="lxml")
 			title = pop.find_all('span', {'class': 'text-primary'})
 			title = (title[0]).text
 			username = pop.find_all('small')
@@ -119,9 +115,7 @@ class WeHeartIt():
 
 		try:
 			for e, u in zip(entries, usernames):
-				image = "https://weheartit.com/images/" + u['data-entry-id'] + "/original.jpg" 
-				id = int(u['data-entry-id'])
-				entry = Entry(id=id, title=e['title'], username=u['data-hearter-username'], entry=e['href'], image=image)
+				entry = self.api.entry(int(u["data-entry-id"]))
 				rentries.append(entry)
 		except:
 			raise NoPostsFound("Could not find any entries related to that search query. Try again with a different one or check your search query."); return

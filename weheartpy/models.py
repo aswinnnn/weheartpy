@@ -17,13 +17,40 @@ class Entry():
     you will be utilizing this object to deal with the results you get from `popular()` or `search_entries()`
     '''
 
-    def __init__(self, id: int, username: str,entry: str, image: str, title: str=None) -> None:
-        self.id = id
-        self.username = username
-        
-        self.url = "https://weheartit.com" + entry
-        self.image = image
-        self.title = title
+    def __init__(self, entrydata: dict) -> None:
+        self.id : int = entrydata["id"] 
+        """
+        return the entry's id
+        """
+        self.creator : User = entrydata["user"]
+        """
+        return a `User` object of the creator.
+        """
+        self.url : str = entrydata["url"]
+        """
+        return the entry's url.
+        """
+        self.image : str = entrydata["image"]
+        """
+        return the entry's image url, usually in it's original size.
+        """
+        self.title : str = entrydata["title"]
+        self.hearts : int = int(entrydata["hearts"])
+        self.created_at : str = entrydata["creation"]
+        """
+        returns the creation date as a `str`, can be used with datetime (its not a datetime object yet.)
+        """
+        self.via : str = entrydata["via"]
+        self.views : int = int(entrydata["views"])
+        self.interactions : int = int(entrydata["interactions"])
+        self.tags : list = entrydata["tags"]
+        """
+        return the tags used on the post as a list.
+        eg.
+        ```
+        entry.tags # ['night', 'awesome', 'anime', 'skincare']
+        ```
+        """
 
     def __repr__(self) -> str:
         return f"Entry(id={self.id}, username={self.username}, url={self.url}, image={self.image}, title={self.title})"
@@ -116,10 +143,17 @@ class User():
     - - name: `str`: name of the user.
     - - avatar: link to the avatar of the user.
     '''
-    def __init__(self, username: str, name: str, avatar: str) -> None:
-        self.username = username
-        self.name = name
-        self.avatar = avatar
+    def __init__(self, userdata: dict) -> None:
+        try:
+            self.id = userdata["id"]
+            self.username = userdata["username"]
+            self.name = userdata["name"]
+            self.avatar = userdata["avatar"]
+            self.public_profile = userdata["public"]
+            self.verified = userdata["verified"]
+            self.badges = userdata["badges"]
+        except KeyError:
+            pass # passing this for now so it doesnt error everytime anything other than entries use it.
 
     def __repr__(self) -> str:
         return f"User(username={self.username}, name={self.name}, avatar={self.avatar})"

@@ -1,5 +1,7 @@
 /dist/
 /weheartpy/__pycache__
 /weheartpy.egg-info/
+tests.py
+/weheartpy/tests.py
 build.bat
 upload.bat
