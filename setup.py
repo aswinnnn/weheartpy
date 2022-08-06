@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 HERE = pathlib.Path(__file__).parent
 
-VERSION = '0.2.2'
+VERSION = '0.2.3'
 PACKAGE_NAME = 'weheartpy'
 AUTHOR = 'aswinnnn'
 AUTHOR_EMAIL = 'aswinsnair028@gmail.com'
@@ -17,7 +17,8 @@ LONG_DESC_TYPE = "text/markdown"
 INSTALL_REQUIRES = [
       'requests',
       'beautifulsoup4',
-      'lxml'
+      'lxml',
+      'user-agent'
 ]
 
 setup(name=PACKAGE_NAME,

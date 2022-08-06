@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs
 from .handler import Error, NoCollectionsFound, NoPostsFound, ConnectionError, NoUsersFound
 from .models import Entry, Collection, User
 from .api import Api
+import user_agent
 
 class WeHeartIt():
 	'''
@@ -17,7 +18,9 @@ class WeHeartIt():
 	'''
 	
 	def __init__(self) -> None:
-		err = requests.get("https://weheartit.com")
+		ua = user_agent.generate_user_agent()
+		headers = {'User-agent': ua}
+		err = requests.get("https://weheartit.com", headers=headers)
 		try:
 			err.raise_for_status()
 		except requests.HTTPError:
@@ -42,7 +45,9 @@ class WeHeartIt():
 			print(entry.url)
 		```
 		'''
-		res = requests.get("https://weheartit.com")
+		ua = user_agent.generate_user_agent()
+		headers = {'User-agent': ua}
+		res = requests.get("https://weheartit.com", headers=headers)
 		res = bs(res.text, features="lxml")
 		images = res.find_all('a', {'class': 'entry js-blc js-blc-t-heart btn-heart btn btn-heart-circle js-heart-button'})
 
@@ -70,7 +75,9 @@ class WeHeartIt():
 			print(c.title, c.link)
 		```
 		'''
-		res = requests.get(f"https://weheartit.com/search/collections?query={query}&sort=most_recent")
+		ua = user_agent.generate_user_agent()
+		headers = {'User-agent': ua}
+		res = requests.get(f"https://weheartit.com/search/collections?query={query}&sort=most_recent", headers=headers)
 		
 		find = bs(res.text, features="lxml")
 		atags = find.find_all('a', {'class':'js-blc js-blc-t-collection collection-name text-overflow-parent'})
@@ -103,8 +110,10 @@ class WeHeartIt():
 			print(entry.image, entry.url, entry.username)
 		```
 		'''
+		ua = user_agent.generate_user_agent()
+		headers = {'User-agent': ua}
 		url = f"https://weheartit.com/search/entries?query={query}" if sort == None else f"https://weheartit.com/search/entries?query={query}&sort=most_popular"
-		res = requests.get()
+		res = requests.get(url, headers=headers)
 		
 		find = bs(res.text, features="lxml")
 		
@@ -139,7 +148,9 @@ class WeHeartIt():
 
 
 		'''
-		res = requests.get(f"https://weheartit.com/search/users?query={query}")
+		ua = user_agent.generate_user_agent()
+		headers = {'User-agent': ua}
+		res = requests.get(f"https://weheartit.com/search/users?query={query}", headers=headers)
 		
 		find = bs(res.text, features="lxml")
 		

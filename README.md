@@ -105,7 +105,7 @@ for c in cocs:
 * If you'd like to add something or fix mistakes, feel free to open an issue or a pull request.
   
 # Updates
-- `v0.2.3` coming soon - hopefully featuring `useragent` and other improvements.
+- `v0.2.3` - using `user-agent` has been made default. Fixed major bug in `search_entries` so you might wanna update to this version to use that correctly.
 - `v0.2.2` - Big update, the library uses weheartit's natural API to bring `Entry` data.
 -  - this features a whole new ton of information you can use from entries such as a views, hearts, tags, titles and creation dates.
 -  - It also includes a `.creator` attribute which is a `User` object of the creator of the post.

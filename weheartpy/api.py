@@ -5,6 +5,7 @@
 import requests
 from json import loads
 from weheartpy.models import User, Entry, Collection
+import user_agent
 # --------------------
 
 
@@ -15,7 +16,9 @@ class Api():
 
     """
     def __init__(self) -> None:
-        err = requests.get("https://weheartit.com")
+        ua = user_agent.generate_user_agent()
+        headers = {'User-agent': ua}
+        err = requests.get("https://weheartit.com", headers=headers)
         try:
             err.raise_for_status()
         except requests.HTTPError:
