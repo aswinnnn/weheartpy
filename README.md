@@ -13,7 +13,7 @@ and `requests` to do my job. The speed is optimal, it has a limitation on number
 
 
 # Requirements
-* requires `Python 10` or greater.
+* requires `Python 3.10` or greater.
 * read the requirements [here](requirements.txt)
 
 you can easily install the packages using [pip](https://pypi.org)
