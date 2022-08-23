@@ -113,6 +113,6 @@ for c in cocs:
 - `v0.2.1` - Implement save feature, lets users save images locally.
   
 # Disclaimer
-- Since this makeshift API client relies on the websites elements to remain unchanged, expect this package to break easily someday. `useragent` will be supported soon.
+- Since this makeshift API client's some modules rely on the websites elements to remain unchanged, expect this package to break easily.
 - This package, code or software is made for educational purposes and does not intend to break any ToS of weheartit.com. The creator/maintainer of this package will not be responsible for any actions done using the code. Use with your own caution and volition.
  
