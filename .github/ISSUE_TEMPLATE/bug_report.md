@@ -28,5 +28,6 @@ If applicable, add screenshots to help explain your problem.
  - Browser [e.g. chrome, safari]
  - Python version [e.g. 3.10.4]
 
+
 **Additional context**
 Add any other context about the problem here.
