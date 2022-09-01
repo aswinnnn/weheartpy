@@ -64,7 +64,7 @@ class Entry():
 
     def save(self, fp) -> None:
         img = requests.get(self.image)
-        with open(Path(fp), "x") as f:
+        with open(Path(fp), "xb") as f:
             f.write(img.content)
 
 
@@ -130,7 +130,7 @@ class Collection():
         fp = fp + "\{filename}.jpeg"
         for img in self.images:
             img = requests.get(img)
-            with open(Path(fp), "x") as f:
+            with open(Path(fp), "xb") as f:
                 f.write(img.content)
             cnt += 1
 
