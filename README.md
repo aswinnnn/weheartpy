@@ -105,7 +105,10 @@ for c in cocs:
 * If you'd like to add something or fix mistakes, feel free to open an issue or a pull request.
 
 > Changelogs have been moved to [here](CHANGELOG.md)
-  
+
+### Current version
+* the current version of the module is `v0.2.4`. Make sure you update to the latest with pip.
+
 # Disclaimer
 - Since this makeshift API client's some modules rely on the websites elements to remain unchanged, expect this package to break easily.
 - This package, code or software is made for educational purposes and does not intend to break any ToS of weheartit.com. The creator/maintainer of this package will not be responsible for any actions done using the code. Use with your own caution and volition.
