@@ -1,0 +1,9 @@
+name: Pyscan dependency scan
+
+on: push
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pyscan 
+        uses: aswinnnnn/pyscan@1.0.0
