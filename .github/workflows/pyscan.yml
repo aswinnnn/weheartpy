@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Pyscan 
-        uses: aswinnnn/pyscan-check@v0.8
+        uses: aswinnnn/pyscan-check@v0.9
