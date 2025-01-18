@@ -7,3 +7,5 @@ jobs:
     steps:
       - name: Pyscan 
         uses: aswinnnn/pyscan-check@v0.9.2
+        with:
+          upload-artifacts: true
