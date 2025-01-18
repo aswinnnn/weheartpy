@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Pyscan 
-        uses: aswinnnn/pyscan-check@v0.9.3
+        uses: aswinnnn/pyscan-check@v0.9.4
         with:
           upload-artifact: true
